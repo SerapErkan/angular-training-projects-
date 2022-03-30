@@ -5,7 +5,7 @@
 <app-card></app-card>
 </div> -->
 
-<div class="main">
+<!-- <div class="main">
   
     <app-card
       [title]="posts[0].title"
@@ -27,5 +27,15 @@
       [subTitle]="posts[2].subTitle"
       [content]="posts[2].content"
     ></app-card>
+  </div> -->
+
+  <div class="main">
+    <app-card *ngFor= "let post of posts "
+      [title]="post.title"
+      [imageUrl]="post.imageUrl"
+      [subTitle]="post.subTitle"
+      [content]="post.content"
+    ></app-card>
+  
   </div>
 
