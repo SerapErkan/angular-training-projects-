@@ -4,7 +4,8 @@
       <div class="box column is-one-third">
         <h1 class="title has-text-centered">Harf Eşleştirme</h1>
 
-        <p class="has-text-centered">{{ randomText }}</p>
+        <!-- <p class="has-text-centered">{{ randomText }}</p> -->
+        <span [class]="compare(letter,enteredText[i])" *ngFor="let letter of randomText.split('');let i=index">{{ letter }}</span>
 
         <div class="field">
           <input
@@ -14,7 +15,6 @@
             placeholder="Text input"
           />
 
-          
           <div class="center-img">
             <div *ngIf="!(randomText === enteredText)">
               <figure class="image is-128x128">
@@ -27,7 +27,6 @@
                 <img class="is-rounded" src="assets/giphy.gif" />
               </figure>
             </div>
-
           </div>
         </div>
       </div>

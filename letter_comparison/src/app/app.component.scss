@@ -13,4 +13,16 @@
 .center-img{
     display: flex;
     justify-content:center;
+
+}
+.pending{//bekle
+    color:gray;
+
+}
+.correct{
+ color:yellowgreen
+}
+.incorrect{
+ color: rgb(255, 0, 0);
+ font-weight:bold;
 }

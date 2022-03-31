@@ -17,6 +17,20 @@ export class AppComponent {
   }
 
 
+  compare(randomletter:string,enteredletter:string){
+
+
+    if (!enteredletter){
+      return "pending";
+    }
+    
+    return randomletter==enteredletter?"correct":"incorrect"
+
+  }
+
+
+
+
 }
 //https://www.npmjs.com/package/@faker-js/faker
 //random faker.lorem.sentence()
