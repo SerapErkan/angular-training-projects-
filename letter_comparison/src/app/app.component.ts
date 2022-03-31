@@ -8,6 +8,15 @@ import {faker} from '@faker-js/faker';
 export class AppComponent {
   // title = 'letter_comparison';
   randomText:string=faker.lorem.sentence();
+  enteredText="";
+
+  getInputValue(value:string){
+
+   this.enteredText=value;
+
+  }
+
+
 }
 //https://www.npmjs.com/package/@faker-js/faker
 //random faker.lorem.sentence()
