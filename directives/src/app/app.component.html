@@ -1,11 +1,22 @@
 <nav>
   <ul class="pagination">
+    <li class="page-item" [ngClass]="{ disabled: currentPage === 0 }">
+      <a class="page-link">Önceki</a>
+    </li>
+
     <li
       class="page-item"
       [ngClass]="{ active: i === currentPage }"
       *ngFor="let img of images; let i = index"
     >
       <a class="page-link">{{ i + 1 }}</a>
+    </li>
+
+    <li
+      class="page-item"
+      [ngClass]="{ disabled: currentPage === images.length - 1 }"
+    >
+      <a class="page-link">Sonraki</a>
     </li>
   </ul>
 </nav>
