@@ -1,5 +1,14 @@
+<div class="container">
+    <div class="mainImg">
+        <h4 class="title">{{images[currentPage].title}}</h4>
+        <img class="img"   [src]="images[currentPage].url" >
+       
+        </div>
+        
+        
+        </div>
 <nav>
-  <ul class="pagination">
+  <ul class="pagination page">
     <li class="page-item" [ngClass]="{ disabled: currentPage === 0 }">
       <a class="page-link" (click)="currentPage=currentPage-1" >Önceki</a>
     </li>
@@ -21,7 +30,3 @@
   </ul>
 </nav>
 
-<div class="img">
-<h1>{{images[currentPage].title}}</h1>
-<img [src]="images[currentPage].url" >
-</div>
