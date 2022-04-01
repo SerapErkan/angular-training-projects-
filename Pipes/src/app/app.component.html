@@ -34,7 +34,6 @@
       {{ date | date: "longDate" }}
 
       <!-- 'MMMM d,y' -->
-      
     </div>
   </div>
 
@@ -68,12 +67,30 @@
     </div>
     <div class="col-md-6">
       <label><b>BOY</b></label>
-      {{ height | number : '1.1-4' }}
-    </div> 
+      {{ height | number: "1.1-4" }}
+    </div>
   </div>
 
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label for="">Mil</label>
+        <input
+          class="form-control"
+          type="text"
+          (input)="onMilesChange($event.target.value)"
+        />
+      </div>
+    </div>
+    <div class="col-md-6">
+      <label><b>km/m/cm</b></label
+      ><br />
+      {{ miles | convert: "km" }}
+      {{ miles | convert: "m" }}
+      {{ miles | convert: "cm" }}
+    </div>
+  </div>
 </div>
 
-
-    <!-- {{ height | number :' 1.0-0'}} // noktadan sonra yok 
+<!-- {{ height | number :' 1.0-0'}} // noktadan sonra yok 
       {{ height | number :' 1.0-4'}} // max 4  -->
