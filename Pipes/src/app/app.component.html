@@ -54,4 +54,26 @@
       {{ money | currency: "TRY" }}
     </div>
   </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label for="">Boy</label>
+        <input
+          class="form-control"
+          type="text"
+          (input)="onHeightChange($event.target.value)"
+        />
+      </div>
+    </div>
+    <div class="col-md-6">
+      <label><b>BOY</b></label>
+      {{ height | number : '1.1-4' }}
+    </div> 
+  </div>
+
 </div>
+
+
+    <!-- {{ height | number :' 1.0-0'}} // noktadan sonra yok 
+      {{ height | number :' 1.0-4'}} // max 4  -->
