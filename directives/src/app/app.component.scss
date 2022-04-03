@@ -1,5 +1,5 @@
 .page {
-    margin-top: 50px;
+  margin-top: 50px;
   justify-content: center;
 }
 .mainImg {
@@ -14,4 +14,12 @@
 }
 .img {
   max-height: 500px;
+}
+
+.pages {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color: rgb(56, 90, 99);
 }

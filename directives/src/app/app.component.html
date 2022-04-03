@@ -1,32 +1,37 @@
 <div class="container">
-    <div class="mainImg">
-        <h4 class="title">{{images[currentPage].title}}</h4>
-        <img class="img"   [src]="images[currentPage].url" >
-       
-        </div>
-        
-        
-        </div>
+  <div class="mainImg">
+    <h4 class="title">{{ images[currentPage].title }}</h4>
+    <img class="img" [src]="images[currentPage].url" />
+  </div>
+</div>
+
+<div class="pages" [ngSwitch]="currentPage">
+  <div *ngSwitchCase="0">ilk sayfa</div>
+  <div *ngSwitchCase="images.length - 1">son sayfa</div>
+  <div *ngSwitchDefault>sayfa sayısı</div>
+</div>
+
 <nav>
   <ul class="pagination page">
     <li class="page-item" [ngClass]="{ disabled: currentPage === 0 }">
-      <a class="page-link" (click)="currentPage=currentPage-1" >Önceki</a>
+      <a class="page-link" (click)="currentPage = currentPage - 1">Önceki</a>
     </li>
 
-    <li
-      class="page-item"
-      [ngClass]="{ active: i === currentPage }"
-      *ngFor="let img of images; let i = index"
-    >
-      <a (click)="currentPage=i" class="page-link">{{ i + 1 }}</a>
-    </li>
+    <ng-container *ngFor="let img of images; let i = index">
+      <li
+        class="page-item"
+        [ngClass]="{ active: i === currentPage }"
+        *ngIf="pageIndex(i)"
+      >
+        <a (click)="currentPage = i" class="page-link">{{ i + 1 }}</a>
+      </li>
+    </ng-container>
 
     <li
       class="page-item"
       [ngClass]="{ disabled: currentPage === images.length - 1 }"
     >
-      <a class="page-link" (click)="currentPage=currentPage+1">Sonraki</a>
+      <a class="page-link" (click)="currentPage = currentPage + 1">Sonraki</a>
     </li>
   </ul>
 </nav>
-
