@@ -1,6 +1,6 @@
 <div class="container">
   <div class="mainImg">
-    <h4 class="title">{{ images[currentPage].title }}</h4>
+    <h4 appFirst [backgroundColor]="'red'" class="title">{{ images[currentPage].title }}</h4>
     <img class="img" [src]="images[currentPage].url" />
   </div>
 </div>
