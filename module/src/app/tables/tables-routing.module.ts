@@ -1,7 +1,9 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-
-const routes: Routes = [];
+import { TablesHomeComponent } from './tables-home/tables-home.component';
+const routes: Routes = [
+  {path:'tables', component:TablesHomeComponent}
+];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
