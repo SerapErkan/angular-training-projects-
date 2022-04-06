@@ -3,11 +3,13 @@ import { CommonModule } from '@angular/common';
 
 import { PlaceholdersRoutingModule } from './placeholders-routing.module';
 import { PlaceholdersHomeComponent } from './placeholders-home/placeholders-home.component';
+import { PlaceholdersComponent } from './placeholders/placeholders.component';
 
 
 @NgModule({
   declarations: [
-    PlaceholdersHomeComponent
+    PlaceholdersHomeComponent,
+    PlaceholdersComponent
   ],
   imports: [
     CommonModule,
