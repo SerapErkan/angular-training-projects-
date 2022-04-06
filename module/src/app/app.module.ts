@@ -16,7 +16,6 @@ import { HomeComponent } from './home/home.component';
   ],
   imports: [
     BrowserModule,
-    PlaceholdersModule,
     TablesModule,
     AppRoutingModule
 
