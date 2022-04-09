@@ -1,2 +1,20 @@
-<app-diveder>Memnuniyet anketi</app-diveder>
+<app-diveder>Memnuniyet Anketi</app-diveder>
 <app-table></app-table>
+
+<app-diveder>Ekstra Bilgiler</app-diveder>
+<app-tabs>
+  <a
+    routerLink="./"
+    [routerLinkActiveOptions]="{ exact: true }"
+    routerLinkActive="active"
+    class="item"
+  >
+    Bioraphy
+  </a>
+  <a routerLink="./companies" routerLinkActive="active" class="item">
+    Companies
+  </a>
+  <a routerLink="./partners" routerLinkActive="active" class="item active">
+    Partners
+  </a>
+</app-tabs>
