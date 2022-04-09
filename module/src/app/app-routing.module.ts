@@ -4,7 +4,7 @@ import { NotfoundComponent } from './notfound/notfound.component';
 import { HomeComponent } from './home/home.component';
 const routes: Routes = [
   {path:'placeholders', loadChildren:()=> import('./placeholders/placeholders.module').then(m =>m.PlaceholdersModule)},
-  {path:'tables', loadChildren:()=> import('./tables/tables-routing.module').then(m =>m.TablesRoutingModule)},
+  {path:'tables', loadChildren:()=> import('./tables/tables.module').then(m =>m.TablesModule)},
   {path:'', component:HomeComponent},
   {path:'**', component:NotfoundComponent}
  
