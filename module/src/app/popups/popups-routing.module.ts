@@ -1,7 +1,9 @@
+import { Content } from '@angular/compiler/src/render3/r3_ast';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { PopupsHomeComponent } from './popups-home/popups-home.component';
 
-const routes: Routes = [];
+const routes: Routes = [{path:'',component:PopupsHomeComponent}];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

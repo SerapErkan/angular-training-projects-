@@ -7,11 +7,13 @@ import { AppComponent } from './app.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { HomeComponent } from './home/home.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
     NotfoundComponent,
-    HomeComponent
+    HomeComponent,
+ 
   ],
   imports: [
     BrowserModule,
